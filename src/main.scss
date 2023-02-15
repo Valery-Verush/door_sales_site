@@ -1,0 +1,101 @@
+@import 'normalize.css';
+
+@import './scss/fonts.scss';
+
+@import './scss/reset.scss';
+
+@import './scss/theme/colors.scss';
+@import './scss/theme/typography.scss';
+@import './scss/theme/breakpoints.scss';
+
+// * {
+//   outline: 1px solid red;
+// }
+
+:root {
+  --font-family-main: 'Montserrat', sans-serif;
+  --font-size-main: 1rem;
+  --font-weight-main: 400;
+  --font-line-height-main: 1.4;
+
+  --color-font: var(--color-font-main);
+  --color-link: var(--color-font-main);
+  --color-link-hover: var(--color-secondary);
+  --color-link-active: var(--color-secondary-active);
+  --color-link-selected: var(--color-secondary-selected);
+
+  --color-font-main: #000;
+  --color-white: #fff;
+  --color-grey: #f3f2ef;
+  --color-secondary: #fc0;
+  --color-secondary-selected: #f1de9b;
+  --color-secondary-active: #f26d00;
+
+  --heder-height: 40px;
+  --container-width: 100%;
+  // --desktop-width: 1280px;
+  // --sm-desktop-width: 1024px;
+  // --table-width: 768px;
+  // --sm-table-width: 640px;
+  // --phone-width: 480px;
+  // --sm-phone-width: 320px;
+
+  @media (min-width: 576px) {
+    & {
+      --container-width: 540px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      --container-width: 720px;
+      --heder-height: 50px;
+    }
+  }
+
+  @media (min-width: 992px) {
+    & {
+      --container-width: 960px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    & {
+      --container-width: 1140px;
+      --heder-height: 60px;
+    }
+  }
+}
+
+* {
+  font-family: var(--font-family-main);
+  font-size: var(--font-size-main);
+  font-weight: var(--font-size-main);
+  line-height: var(--font-line-height-main);
+  color: var(--color-font);
+}
+body {
+  background: var(--color-grey);
+}
+.container {
+  width: var(--container-width);
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.page {
+  margin-top: var(--heder-height);
+}
+.link {
+  fill: var(--font-link);
+  color: var(--font-link);
+  &:hover {
+    fill: var(--color-link-hover);
+    color: var(--color-link-hover);
+  }
+  &.active {
+    fill: var(--color-link-active);
+    color: var(--color-link-active);
+  }
+}

@@ -1,0 +1,17 @@
+.product-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--color-white);
+  border-radius: 5px;
+  padding: 10px;
+  &:hover {
+    box-shadow: 0 0 10px 1px rgb(0 0 0 / 10%);
+  }
+}
+
+.product-card__image {
+  position: relative;
+  width: 124px;
+  height: 300px;
+}
