@@ -4,7 +4,7 @@ class LocalStorageService {
   }
 
   dispatchEvent(key) {
-    const event = new CustomEvent("storage", {
+    const event = new CustomEvent('storage', {
       detail: key ? { key, value: this.getItem(key) } : null,
       bubbles: true,
     });
@@ -24,10 +24,7 @@ class LocalStorageService {
       const existedValue = this.getItem(key);
       if (existedValue) {
         if (Array.isArray(existedValue)) {
-          this.storage.setItem(
-            key,
-            JSON.stringify([...value, ...existedValue])
-          );
+          this.storage.setItem(key, JSON.stringify([...value, ...existedValue]));
         }
       } else {
         this.storage.setItem(key, JSON.stringify(value));

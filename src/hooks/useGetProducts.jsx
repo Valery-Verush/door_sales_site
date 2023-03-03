@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { productService } from '../services';
+import { create } from 'zustand';
+import { useProducts } from './useProducts';
 
-export const useGetProducts = (func) => {
+export const useGetProducts = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const [items, setItems] = useState([]);
   const [error, setError] = useState('');
+  const getProducts = useProducts((state) => state.getProducts);
 
   const getItems = () => {
     setIsLoading(true);
     productService
       .getProducts()
       .then((data) => {
-        func(data);
+        getProducts(data);
       })
       .catch((error) => {
         setError(error.message);

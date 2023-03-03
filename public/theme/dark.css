@@ -1,0 +1,11 @@
+:root {
+  --color-font: var(--color-white);
+  --color-link: var(--color-white);
+  --color-link-hover: var(--color-secondary);
+  --color-link-active: var(--color-secondary-active);
+  --color-link-selected: var(--color-secondary-selected);
+  --color-element-background: var(--color-dark-one);
+  --color-background: var(--color-dark-two);
+  --color-preloader-background: var(--color-light-preloader-shadow);
+  --color-shadow: var(--color-light-shadow);
+}
