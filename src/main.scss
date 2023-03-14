@@ -8,6 +8,18 @@
 //   outline: 1px solid red;
 // }
 
+// :root {
+//   --color-font: var(--color-black);
+//   --color-link: var(--color-black);
+//   --color-link-hover: var(--color-secondary);
+//   --color-link-active: var(--color-secondary-active);
+//   --color-link-selected: var(--color-secondary-selected);
+//   --color-element-background: var(--color-white);
+//   --color-background: var(--color-grey1);
+//   --color-preloader-background: var(--color-dark-preloader-shadow);
+//   --color-shadow: var(--color-dark-shadow);
+// }
+
 :root {
   --font-family-main: 'Montserrat', sans-serif;
   --font-size-main: 1rem;
@@ -33,7 +45,7 @@
   --heder-height: 40px;
   --footer-height: 100px;
   --container-width: 100%;
-  --card-space: 5px;
+  --card-space: 3px;
 
   @media (min-width: 576px) {
     & {
@@ -85,6 +97,7 @@ body {
   min-height: calc(100vh - var(--heder-height) - var(--footer-height) - 2 * var(--card-space));
 }
 .link {
+  cursor: pointer;
   fill: var(--color-link);
   color: var(--color-link);
   transition: 0.4s ease-in-out;

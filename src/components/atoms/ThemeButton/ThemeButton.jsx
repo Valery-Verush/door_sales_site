@@ -3,8 +3,10 @@ import { useState } from 'react';
 import { useThemeSwitcher } from 'react-css-theme-switcher';
 import localStorageService from '../../../services/LocalStorage';
 import './ThemeButton.scss';
+import { ReactComponent as MoonIcon } from './moon-svgrepo.svg';
+import { ReactComponent as SunIcon } from './sun-svgrepo.svg';
 export function ThemeButton() {
-  const { switcher, themes, currentTheme, status } = useThemeSwitcher();
+  const { switcher, themes, currentTheme } = useThemeSwitcher();
   const [isDarkMode, setIsDarkMode] = useState(false);
   const toggleDarkMode = () => {
     setIsDarkMode((previous) => {
@@ -15,9 +17,12 @@ export function ThemeButton() {
     });
   };
   return (
-    <label className='theme-button__switch'>
-      <input onClick={toggleDarkMode} type='checkbox' readOnly checked={currentTheme === 'dark'} />
-      <span className='theme-button__slider'></span>
-    </label>
+    <div onClick={toggleDarkMode} className='theme-button link'>
+      {isDarkMode ? <MoonIcon /> : <SunIcon />}
+    </div>
+    // <label className='theme-button__switch'>
+    //   <input onClick={toggleDarkMode} type='checkbox' readOnly checked={currentTheme === 'dark'} />
+    //   <span className='theme-button__slider'></span>
+    // </label>
   );
 }

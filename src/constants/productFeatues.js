@@ -1,7 +1,7 @@
 export const productFeatues = [
   { name: 'price', label: 'Цена', default: '900' },
   { name: 'brand', label: 'Бренд', default: 'РФ' },
-  { name: 'coating', label: 'Покрытие', default: 'экошпон' },
+  // { name: 'coating', label: 'Покрытие', default: 'экошпон' },
   { name: 'material', label: 'Материал', default: 'массив + МДФ' },
   { name: 'itemthickness', label: 'Толщина двери', default: '36' },
   { name: 'color', label: 'Цвет', default: 'Орех карамель' },
